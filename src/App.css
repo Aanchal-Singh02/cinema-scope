@@ -1,38 +1,321 @@
-.App {
+/* style.css */
+
+/* Basic resets */
+body, h1, h2, h3, p, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #171919;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+span {
+  color : rgb(241, 164, 21);  
+}
+
+/* Header styles */
+header {
+  background-color: rgb(8, 6, 2);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header button {
+  background-color: #444;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+header button:hover {
+  background-color: #555;
+}
+
+/* Search section styles */
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-section input,
+.search-section button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #110606;
+  font-size: 16px;
+}
+
+.search-section button {
+  background-color:rgb(225, 151, 14);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-section button:hover {
+  background-color:  rgb(180, 120, 10);
+}
+
+/* Grid container styles */
+#movieGrid, #watchlistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: rgb(9, 3, 3);
+}
+
+/* Movie card styles */
+.movie-card {
+  background-color: rgb(23, 17, 17);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+.movie-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.movie-card button {
+  background-color:rgb(225, 151, 14);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.movie-card button:hover {
+  background-color:  rgb(180, 120, 10);
+}
+
+/* Details section styles */
+#movieDetails {
+  display: none;
+  padding: 20px;
+  background-color: #333;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Centering content inside the card */
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#movieDetails img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin: 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#movieDetails h2, 
+#movieDetails p {
+  color: #fff;
+  margin: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#movieDetails button {
+  background-color: rgb(241, 164, 21);
+  border: none;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+#movieDetails button:hover {
+  background-color: rgb(184, 127, 19);
+}
+
+/* WatchList section styles */
+#watchList {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Back button styles */
+#backButton {
+  background-color: #6c757d;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#backButton:hover {
+  background-color: #5a6268;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-card img {
+  width: 100%;
+}
+
+.details-section {
+  padding: 20px;
+}
+#watchlistButton {
+  text-decoration: none;
+  background-color: rgb(241, 164, 21); 
+}
+#watchlistButton:hover {
+ background-color:  rgb(168, 121, 32);
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .search-section {
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-section input, .search-section button {
+      width: 100%;
+      margin: 5px 0;
   }
+
+  #movieGrid, #watchlistGrid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 5px;
+  }
+
+  .movie-card {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 24px;
+  }
+
+  .search-section {
+      padding: 10px;
+  }
+
+  .search-section input, .search-section button {
+      font-size: 14px;
+  }
+
+  .movie-card h3 {
+      font-size: 16px;
+  }
+
+  .movie-card p {
+      font-size: 12px;
+  }
+
+  .movie-card button {
+      font-size: 12px;
+      padding: 8px;
+  }
+}
+
+.search-container {
+  display: flex; /* Flexbox ka istemal karke elements ko horizontally align karna */
+  justify-content: center; /* Center align karna */
+  align-items: center; /* Vertically center align karna */
+  margin: 20px 0; /* Top aur bottom margins */
+}
+
+.search-input {
+  padding: 10px; /* Input ke andar padding */
+  font-size: 16px; /* Font size */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  width: 300px; /* Width of the search input */
+  margin-right: 10px; /* Input aur button ke beech space */
+}
+
+.search-button {
+  padding: 10px 15px; /* Button ke andar padding */
+  font-size: 16px; /* Font size */
+  background-color: #007BFF; /* Button ka background color */
+  color: white; /* Text color */
+  border: none; /* Border remove karna */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Hover effect ke liye background color change */
 }

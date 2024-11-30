@@ -1,0 +1,47 @@
+.movie-details {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px white;
+}
+
+.movie-details h2 {
+    font-size: 2em;
+    color: #faf1f1;
+    margin-bottom: 10px;
+}
+
+.movie-details img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.movie-details p {
+    margin: 5px 0;
+    color: #faf4f4;
+    line-height: 1.6;
+}
+
+.movie-details .genre {
+    font-weight: bold;
+    color: #ff4500; /* Highlight genre */
+}
+
+.movie-details .close-button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Add some space above the button */
+}
+
+.movie-details .close-button:hover {
+    background-color: #e63900; /* Darker shade for hover */
+}
